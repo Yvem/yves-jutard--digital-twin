@@ -2,17 +2,10 @@
 
 import { useMemo } from "react";
 import { AssistantRuntimeProvider, AssistantCloud } from "@assistant-ui/react";
-import {
-  useChatRuntime,
-  AssistantChatTransport,
-} from "@assistant-ui/react-ai-sdk";
+import { useChatRuntime, AssistantChatTransport } from "@assistant-ui/react-ai-sdk";
 import { lastAssistantMessageIsCompleteWithToolCalls } from "ai";
 import { Thread } from "@/components/assistant-ui/thread";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { ThreadListSidebar } from "@/components/assistant-ui/threadlist-sidebar";
 import {
   Breadcrumb,
@@ -44,10 +37,7 @@ export const Assistant = () => {
           <SidebarInset>
             <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
               <SidebarTrigger />
-              <Separator
-                orientation="vertical"
-                className="border-border mr-2 h-4"
-              />
+              <Separator orientation="vertical" className="border-border mr-2 h-4" />
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem className="hidden md:block">
@@ -75,6 +65,7 @@ export const Assistant = () => {
                 </div>
               </div>
             </header>
+
             <div className="flex-1 overflow-hidden">
               <Thread />
             </div>
